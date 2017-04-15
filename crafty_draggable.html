@@ -1,0 +1,48 @@
+<html>
+<head>
+
+<script type="text/javascript" src="https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+// Init Crafty:
+   Crafty.init();
+   Crafty.scene("game", function () {
+
+    Crafty.background("#000");
+    var testObj1 = Crafty.e("2D, DOM, Color,Mouse,Draggable")
+    testObj1.color("green");
+    testObj1.attr({x: 50, y: 50, h: 50,  w: 50
+    });
+
+
+    testObj1.bind("StartDrag", function() {
+    console.log("START1" +     testObj1.x + " " +     testObj1.y );
+    });
+
+    testObj1.bind("StopDrag", function() {
+    console.log("STOP1" +     testObj1.x + " " +     testObj1.y );
+    });
+
+    var testObj2 = Crafty.e("2D, DOM, Color,Mouse,Draggable")
+    testObj2.color("yellow");
+    testObj2.attr({x: 150, y: 50, h: 50,  w: 50
+    });
+
+    testObj2.bind("StartDrag", function() {
+    console.log("START2" +     testObj2.x + " " +     testObj2.y );
+    });
+
+    testObj2.bind("StopDrag", function() {
+    console.log("STOP2" +     testObj2.x + " " +     testObj2.y );
+    });
+       
+  });
+    Crafty.scene("game");//start the game
+</script>
+
+
+</body>
+</html>
