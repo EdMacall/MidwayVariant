@@ -1,3 +1,14 @@
 body {
-	background:skyblue;
+	background:#0070b1;
+  background-image:url("../img/bg.png");
+  background-repeat:repeat-x;
+}
+
+#game {
+  
+  border:navy 12px double;
+  width:auto;
+  text-align:center;
+  margin:20px auto;
+  padding:6px;
 }
